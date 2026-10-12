@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>One Thankful Word | Story Time</title>
+  <link rel="stylesheet" href="assets/thankful.css">
+  <script defer src="assets/page-flip.js"></script>
+  <script defer src="assets/thankful-text.js"></script>
+  <script defer src="assets/thankful.js"></script>
+</head>
+<body>
+  <header class="toolbar">
+    <a class="control home" href="./" id="home">← Home</a>
+    <div class="languages" aria-label="Reading language">
+      <button type="button" id="english" lang="en" aria-pressed="true">English</button>
+      <button type="button" id="bangla" lang="bn" aria-pressed="false">বাংলা</button>
+    </div>
+    <nav class="tools" aria-label="Book controls">
+      <button class="control icon" type="button" id="pages" title="All pages" aria-label="All pages">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      </button>
+      <button class="control icon" type="button" id="sound" title="Turn sound off" aria-label="Turn sound off" aria-pressed="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path id="sound-waves" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      </button>
+      <button class="control icon" type="button" id="fullscreen" title="Fullscreen" aria-label="Fullscreen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+      <a class="control download" id="download" href="pdf/One-Thankful-Word-en.pdf" download>↓ PDF</a>
+    </nav>
+  </header>
+  <h1 class="sr-only" id="book-title">One Thankful Word: An Alhamdulillah Story</h1>
+  <main class="stage" id="stage" aria-label="Book pages">
+    <div id="book-frame"><div id="book"></div></div>
+    <p id="loading" role="status">Opening your book…</p>
+  </main>
+  <p class="load-error" id="load-error" role="status" hidden>A page could not load. Reload this page or download the PDF to keep reading.</p>
+  <footer class="page-nav">
+    <button class="control arrow" type="button" id="previous" aria-label="Previous page" disabled>‹</button>
+    <span id="page-label" aria-live="polite" aria-atomic="true">1 of 30</span>
+    <button class="control arrow" type="button" id="next" aria-label="Next page">›</button>
+  </footer>
+  <div class="sr-only" id="page-text"></div>
+  <dialog id="thumbnails" aria-labelledby="thumbnails-title">
+    <div class="dialog-heading"><h2 id="thumbnails-title">All pages</h2><button class="control icon" type="button" id="close-thumbnails" aria-label="Close">×</button></div>
+    <div class="thumbnail-grid" id="thumbnail-grid"></div>
+  </dialog>
+  <noscript><p class="no-script">JavaScript is needed for page turning. Read the <a href="pdf/One-Thankful-Word-en.pdf">English PDF</a> or <a href="pdf/One-Thankful-Word-bn.pdf" lang="bn">বাংলা PDF</a>.</p></noscript>
+</body>
+</html>
